@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Modern Exchange</title>
+  <link rel="shortcut icon" href="./assets/logo-removebg-preview.png" type="image/x-icon">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icon-css/css/flag-icon.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+</head>
+<body>
+   <section>
+      <div class="register-ui-sec">
+        <form id="loginForm" class="form-wrapper">
+          <div class="xe-ui-exit-x " id="exit-x">
+            <i class="fa-solid fa-xmark"></i>
+          </div>
+          <div class="xe-ui-sign-name">
+            <p>Sign in</p>
+          </div>
+          <div class="oen-ui-input">
+            <label>Email</label>
+            <input type="email" name="email" placeholder="Enter your email" required>
+          </div>
+          <div class="tow-ui-input">
+            <label>Password</label>
+            <input type="password" name="password" placeholder="Enter your password" required>
+          </div>
+          <button type="submit">Continue</button>
+          <div id="loginMessage"></div>
+        </form>
+    </div>
+   </section>
+   <section>
+    <div class="form-container">
+       <div class="form-wrapper">
+        <div class="xe-ui-exit-x " id="exit-x">
+          <i class="fa-solid fa-xmark"></i>
+        </div>
+      <h2>Register</h2>
+      <form action="#" method="post">
+        <input type="text" name="fullname" placeholder="Name username" required>
+        <input type="email" name="email" placeholder="G-mail" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <input type="password" name="confirmPassword" placeholder="Confirm password" required>
+        <button type="submit">Register</button>
+      </form>
+      <p>have an account? <a href="#">Sign in</a></p>
+    </div>
+    </div>
+   </section>
+  <div class="exchange-nav-section">
+    <nav class="exchange-navbar-nav">
+      <div class="exchane-logo">
+        <img src="./assets/logo-removebg-preview.png" alt="Logo" />
+      </div>
+      <div class="auth-links" id="authButtons">
+        <a href="#" id="showRegister" >Sign in</a>
+        <a href="#" id="showSignIn" class="auth-reg" >Register</a>
+      </div>
+      <div id="userProfile" style="display:none;">
+        <img id="userPhoto" src="" alt="User" style="width:40px; height:40px; border-radius:50%;">
+      </div>
+    </nav>
+      <div class="exchange-title-nav">
+         <div class="exchange-title-frs">
+            <h1>Global currency conversions transfers</h1>
+         </div>
+         <div class="exchange-title-sec">
+             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse, error!</p>
+         </div>
+      </div>
+  </div>
+    <main>
+        <div class="global-cur-exch">
+            <div class="global-cur-wrapper">
+                <div class="convert-head">
+                    <span><i class="fa-solid fa-comments-dollar"></i> Convert</span>
+                </div>
+                <div class="convert-amount">
+                    <input type="search" value="$1.00">
+                    <label>Amount</label>
+                </div>
+                <div class="convert-from">
+                    <label for="from">from</label>
+                    <select>
+                        <option value="USD">USD Dollar</option>
+                        <option value="EUR">EUR Euro</option>
+                        <option value="GBP">GBP British pound </option>
+                        <option value="PLN">PLN Polland Zloty </option>
+                        <option value="AED">AED United Arab Emirates Dirham </option>
+                        <option value="TRY">TRY Turkey lira </option>
+                        <option value="RUB">RUB Russian ruble </option>
+                    </select>
+                </div>
+                <div class="convert-ex">
+                    <span><i class="fa-solid fa-right-left"></i></span>
+                </div>
+                <div class="convert-to">
+                    <label for="from">to</label>
+                    <select>
+                        <option value="EUR">EUR Euro</option>
+                        <option value="USD">USD dollar</option>
+                        <option value="GBP">GBP British pound </option>
+                        <option value="PLN">PLN Polland Zloty </option>
+                        <option value="AED">AED United Arab Emirates Dirham </option>
+                        <option value="TRY">TRY Turkey lira </option>
+                    </select>
+                </div>
+                  <div class="conversion">
+                    <p class="sc-conver"> </p>
+                     <h2 class="sc-answer"></h2>
+                  </div>
+                <div class="convert-submit-btn">
+                    <button>Convert</button>
+                </div>
+            </div>
+        </div>
+
+        <section class="exchange-section">
+          <h2 class="chart-title">EUR/USD Exchange Statistics</h2>
+          <div class="chart-container">
+            <canvas id="eurUsdChart"></canvas>
+          </div>
+          <table class="exchange-table">
+            <thead>
+              <tr>
+                <th>Period</th>
+                <th>High</th>
+                <th>Low</th>
+                <th>Average</th>
+              </tr>
+            </thead>
+            <tbody id="stats-table-body"></tbody>
+          </table>
+        </section>
+       
+        <section>
+           <div class="business-section">
+             <div class="business-section-wrapper">
+               <div class="business-section-left">
+                  <div class="business-section-left-head">
+                    <img src="./assets/united-states.png" alt="flag-jpg"> <span>USD - US Dollar</span>
+                  </div>
+                  <div class="business-section-left-content">
+                      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                        Illum dicta, enim ab fugiat esse iure quis
+                         doloremque architecto, hic magni ea voluptatibus mollitia nisi rem $.</p>
+                  </div>
+                  <div class="business-section-left-btn">
+                    <button>US Dollar <i class="fa-solid fa-arrow-right"></i></button>
+                  </div>
+               </div>
+
+               <div class="business-section-right">
+                <div class="business-section-right-head">
+                  <img src="./assets/europe-flag-jpg-xl.jpg" alt="flag-jpg"> <span>EUR - Euro</span>
+                </div>
+                <div class="business-section-right-content">
+                  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                    Illum dicta, enim ab fugiat esse iure quis
+                     doloremque architecto, hic magni ea voluptatibus mollitia nisi rem $.</p>
+                </div>
+                <div class="business-section-right-btn">
+                  <button>EURO <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+             </div>
+             </div>
+           </div>
+        </section>
+
+        <footer class="exchange-footer">
+           <div class="footer-wrapper">
+            <div class="footer-section about">
+              <h3>About Us</h3>
+              <p>We are a leading currency exchange service, offering real-time
+                 exchange rates and seamless currency conversion for global markets.</p>
+            </div>
+            <div class="footer-section contact">
+              <h3>Contact</h3>
+              <ul>
+                <li>Email: <a href="mailto:info@exchange.com">info@exchange.com</a></li>
+                <li>Phone: +1 800 123 4567</li>
+                <li>Address: 19a Exchange St, Tbilisi, GEORGIA</li>
+              </ul>
+            </div>
+            <div class="footer-section social">
+              <h3>Follow Us</h3>
+              <ul>
+                <li><a href="#" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a></li>
+                <li><a href="#" class="social-icon"><i class="fa-brands fa-x-twitter"></i></a></li>
+                <li><a href="#" class="social-icon"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                <li><a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a></li>
+              </ul>
+            </div>
+           </div>
+           <div class="footer-bottom">
+            <p>&copy; 2025 NEXPAY Inc. All rights reserved.</p>
+          </div>
+        </footer>
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+   
+    <script src="script.js"></script>
+    <script src="chart.js"></script>
+    
+</body>
+</html>
