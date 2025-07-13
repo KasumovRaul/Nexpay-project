@@ -164,9 +164,13 @@ body.no-scroll{
 
 .convert-ex span {
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.07);
-  background: rgba(229, 228, 228, 0.796);
+  background: #0558aa;
   padding: 8px 10px;
   border-radius: 20px;
+}
+
+.fa-right-left{
+  color: #fff;
 }
 
 .select-row {
@@ -295,13 +299,13 @@ option {
 }
 
 canvas {
-  display: block; /* canvas'ın içeriğini düzgün şekilde ortalar */
+  display: block; 
 }
 
 /*---business---*/
 .business-section {
-  padding: 4rem 2rem;
-  margin-top: 5em;
+  padding: 4rem 1.2rem;
+  margin-top: 2em;
 }
 
 .business-section-wrapper {
@@ -763,7 +767,7 @@ button[type="submit"]:hover {
   }
 
   .exchange-section{
-    margin:23em auto 0 auto;
+    margin:23em 1em 0 1em;
   }
 
   .business-section-wrapper{
@@ -809,7 +813,7 @@ button[type="submit"]:hover {
   }
 
   .exchange-section{
-    margin:27em auto 0 auto;
+    margin:27em 1em 0 1em;
   }
 
   .chart-container{
@@ -849,8 +853,21 @@ button[type="submit"]:hover {
     top: 46%;
     height: 500px;
 }
+  
+  .form-wrapper{
+    margin: 8px;
+  }
 
+  .fa-xmark{
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    font-size: larger;
+  }
 
+  #loginMessage, .form-wrapper p{
+    font-size: 16px;
+  }
 }
 
 

@@ -57,9 +57,17 @@ function setupCurrencyConvertor() {
     elements.resultText.textContent = text;
     elements.resultValue.textContent = value;
   }
-}
+};
 
 window.addEventListener('DOMContentLoaded', setupCurrencyConvertor);
+
+ function lockScroll(){
+  document.body.style.overflow = "hidden";
+ }
+
+ function unLockScroll(){
+  document.body.style.overflow = "auto";
+ }
 
 //signin
 document.addEventListener('DOMContentLoaded', function () {
@@ -72,12 +80,15 @@ document.addEventListener('DOMContentLoaded', function () {
   showRegisterBtn.addEventListener("click", function (e) {
     e.preventDefault();
     registerFormSec.style.display = "flex";
+    lockScroll();
   });
 
   showSignInBtn.addEventListener("click", function (e) {
     e.preventDefault();
     signUpFormSec.style.display = 'flex';
+    lockScroll();
   });
+
 
 
   // Formlar arası geçiş
@@ -94,6 +105,21 @@ document.addEventListener('DOMContentLoaded', function () {
     btn.addEventListener('click', () => {
       signUpFormSec.style.display = 'none';
       registerFormSec.style.display = 'none';
+      unLockScroll();
     });
   });
+});
+
+
+//Logo refresh functionality
+document.addEventListener('DOMContentLoaded',()=>{
+  const logoImg = document.querySelector(".exchane-logo img");
+
+  if(logoImg){
+    logoImg.addEventListener("click", ()=>{
+      window.location.reload();
+    });
+
+    logoImg.style.cursor="pointer";
+  }
 });
